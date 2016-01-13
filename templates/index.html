@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title> D3 </title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="static/js/code_visual.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="alert alert-danger" role="alert">
+    <button onclick="Dstar()" type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> DStar
+    </button>
+    <button onclick="Pass()" type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> COVER SUCCESS
+    </button>
+    <button onclick="PassF()" type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> COVER FAILURE
+    </button>
+    <button onclick="NotPass()" type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> UNCOVER SUCCESS
+    </button>
+    <button onclick="NotPassF()" type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> UNCOVER FAILURE
+    </button>
+    <form id="fault_form" method="GET" action="">
+    <select id="fault_id" name="fault_id" onchange='this.form.submit();' class="form-control">
+        <option value="0"> --Select Test Data Set Result-- </option>
+        <option value="0000"> simple_single_same_near </option>
+        <option value="0001"> simple_single_same_far </option>
+        <option value="001"> simple_single_diff_far </option>
+        <option value="010"> simple_multi_same_far </option>
+        <option value="011"> simple_multi_diff_far </option>
+        <option value="100"> fuzz_single_same_far </option>
+        <option value="101"> fuzz_single_diff_far </option>
+        <option value="110"> fuzz_multi_same_far </option>
+        <option value="111"> fuzz_multi_diff_far </option>
+    </select>
+    </form>
+    </div>
+    </nav>
+</body>
+</html>
